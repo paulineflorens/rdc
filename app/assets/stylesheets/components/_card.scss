@@ -1,0 +1,33 @@
+.cards {
+display: flex;
+}
+
+.card-image {
+  width: 250px;
+  height: 300px;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid rgb(230,230,230);
+  background-image: asset-url('image.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+.card-text {
+  display: flex;
+}
+
+// .card-text {
+//   width: 150px;
+//   height: 100px;
+//   position: absolute;
+//   bottom: 10px;
+//   background-color: white;
+// }
+
+.card p {
+  color: #808080;
+  font-weight: lighter;
+  font-size: 16px;
+}
