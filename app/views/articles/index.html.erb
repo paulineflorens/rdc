@@ -1,2 +1,28 @@
 <h1>Articles#index</h1>
 <p>Find me in app/views/articles/index.html.erb</p>
+
+<div class="cards-articles-container d-flex">
+  <% @articles.each do |article| %>
+  <div class="cards row justify-content-between pt-2">
+    <div class="col">
+      <div class="card-article-image">
+        <div class="card-article-content">
+          <div class="card-article-title-price d-flex">
+            <div class="card-article-title">
+              <p><%= article.name %></p>
+            </div>
+            <div class="card-article-price">
+            <p><%= article.price %> €</p>
+
+            </div>
+          </div>
+          <div class="card-article-brand">
+            <p><%= article.brand.name %></p>
+          </div>
+          <div class="card-article-color"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
