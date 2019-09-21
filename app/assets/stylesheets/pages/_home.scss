@@ -1,1 +1,31 @@
 // Specific CSS for your home-pag
+a.home-link {
+  text-decoration: none;
+  color: black;
+  font-family: $body-font;
+  position: relative;
+
+&:after {
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+&:hover:after {
+  width: 100%;
+  left: 0;
+  text-decoration: none;
+
+}
+}
+
+.vertical-text {
+  transform:rotate(-90deg) translate( -50%,0);
+  transform-origin:0.35em center;
+}
+

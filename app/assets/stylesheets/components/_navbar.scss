@@ -3,12 +3,23 @@
   background: white;
   height: 64px;
   border-bottom: 1px solid #e1e1e1;
+  color: black;
+  margin-bottom: 15px;
 }
 
-.navbar .navbar-collapse {
-  flex-grow: 0;
+a.navbar-link {
+  color: black;
+
+&:hover {
+  text-decoration: none;
+}
 }
 
-.navbar .navbar-brand img {
-  width: 40px;
-}
+
+// .navbar .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar .navbar-brand img {
+//   width: 40px;
+// }
