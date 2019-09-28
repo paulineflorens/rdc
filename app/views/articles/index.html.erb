@@ -1,12 +1,14 @@
 <div class="container">
   <h1>La collection Automne/Hiver 19</h1>
   <p>Retrouvez toutes nos chaussures dans notre magasin à Marseille</p>
-  <!-- <div class="div">
-    <%= simple_form_for :search, url: articles_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-    <%= f.input :brand, as: :check_boxes %>
-    <%= f.submit "Search", class: "btn btn-outline-primary" %>
+  <div class="div">
+    <%= form_tag articles_path, method: :get, html: { class: 'form-inline' } do %>
+    <% Brand.all.each do |b| %>
+      <%= check_box_tag "query", b.name %>
+    <% end  %>
+    <%= submit_tag "Search", class: "btn btn-outline-primary" %>
     <% end %>
-  </div> -->
+  </div>
 
   <div class="cards-articles-container d-flex">
     <% @articles.each do |article| %>

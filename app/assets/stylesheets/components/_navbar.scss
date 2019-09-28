@@ -1,18 +1,28 @@
 .navbar {
-  justify-content: space-between;
+  // justify-content: space-between;
   background: white;
-  height: 64px;
+  height: 55px;
   border-bottom: 1px solid #e1e1e1;
   color: black;
-  margin-bottom: 15px;
+  margin-top: 10px;
+
 }
 
 a.navbar-link {
   color: black;
+  margin-left: 15px;
 
 &:hover {
   text-decoration: none;
 }
+}
+
+.list {
+  list-style-type: none;
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
 }
 
 

@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    # @search = params["search"]
+    # @articles = Article.joins(:brands).where("brand.name ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+    brands = Brand.where("name ILIKE ?", "%#{params[:query]}%")
+    @articles = brands.first.articles
   end
 end

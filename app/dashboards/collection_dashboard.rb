@@ -57,7 +57,7 @@ class CollectionDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how collections are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(collection)
-  #   "Collection ##{collection.id}"
-  # end
+  def display_resource(collection)
+    "Collection #{collection.name}"
+  end
 end

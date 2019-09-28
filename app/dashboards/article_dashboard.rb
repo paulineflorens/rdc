@@ -30,6 +30,7 @@ class ArticleDashboard < Administrate::BaseDashboard
   name
   brand
   price
+
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
