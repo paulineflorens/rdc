@@ -1,1 +1,67 @@
-// Specific CSS for your home-pag
+// Specific CSS for your home-page
+.square {
+  width: 600px;
+  height: 500px;
+  background-color: grey;
+  display: block;
+  margin: 20px 0 0 35%;
+  position: relative;
+}
+
+.square h1{
+  position: absolute;
+  top: 130px;
+  left: -220px;
+}
+
+.square a.home-link{
+  position: absolute;
+  top: 210px;
+  left: -60px;
+  font-style: italic;
+}
+
+.square img {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.square p {
+  position: relative;
+  left: -80%;
+}
+
+a.home-link {
+  text-decoration: none;
+  color: black;
+  font-family: $body-font;
+  position: relative;
+
+  &:after {
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  &:hover:after {
+    width: 100%;
+    left: 0;
+    text-decoration: none;
+
+  }
+}
+
+.vertical-text {
+  transform:rotate(-90deg) translate( -50%,0);
+  transform-origin:0.35em center;
+}
+
+.container h3 {
+  margin-top: 50px;
+}

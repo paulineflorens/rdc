@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>La collection Automne/Hiver 19</h1>
+  <p>Retrouvez toutes nos chaussures dans notre magasin à Marseille</p>
+  <div class="div">
+    <%= form_tag articles_path, method: :get, html: { class: 'form-inline' } do %>
+    <% Brand.all.each do |b| %>
+      <%= check_box_tag "query", b.name %>
+    <% end  %>
+    <%= submit_tag "Search", class: "btn btn-outline-primary" %>
+    <% end %>
+  </div>
+
+  <div class="cards-articles-container d-flex">
+    <% @articles.each do |article| %>
+    <div class="cards row justify-content-between pt-2">
+      <div class="col">
+        <div class="card-article-image">
+          <div class="card-article-content p-2">
+            <div class="card-article-title-price d-flex justify-content-between">
+              <div class="card-article-title">
+                <h5><%= article.name %></h5>
+              </div>
+              <div class="card-article-price">
+              <h5><%= article.price %> €</h5>
+
+              </div>
+            </div>
+            <div class="card-article-brand">
+              <p><%= article.brand.name %></p>
+            </div>
+            <div class="card-article-color">
+              <p>Existe aussi en</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
