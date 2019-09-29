@@ -14,7 +14,7 @@
     <% @articles.each do |article| %>
     <div class="cards row justify-content-between pt-2">
       <div class="col">
-        <div class="card-article-image">
+        <div class="card-article-image" style="background-image: url('<%= cl_image_path article.photo %>')">
           <div class="card-article-content p-2">
             <div class="card-article-title-price d-flex justify-content-between">
               <div class="card-article-title">
@@ -29,7 +29,7 @@
               <p><%= article.brand.name %></p>
             </div>
             <div class="card-article-color">
-              <p>Existe aussi en</p>
+              <p><%= article.color %></p>
             </div>
           </div>
         </div>

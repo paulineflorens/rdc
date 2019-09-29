@@ -14,9 +14,14 @@ class ArticleDashboard < Administrate::BaseDashboard
     price: Field::Number,
     color: Field::String,
     name: Field::String,
-    photo: Field::String,
+    photo: Field::Carrierwave.with_options(
+      image: :standard,
+      multiple: false,
+      remove: false,
+      remote_url: false
+      ),
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -29,6 +34,7 @@ class ArticleDashboard < Administrate::BaseDashboard
   collection
   name
   brand
+  photo
   price
 
   ].freeze
