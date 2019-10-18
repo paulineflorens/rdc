@@ -1,107 +1,43 @@
 <!-- banner -->
 
 <div class="square">
-  <p class="vertical-text">Chaussures & Accessoires</p>
+  <div class="square_photo_text">
   <h1>NOUVELLE COLLECTION</h1>
   <%= link_to "DÉCOUVRIR", articles_path, class: "home-link" %>
+  <div class="square_img">
   <%= image_tag ("home.jpg"), width: 300 %>
+  </div>
+  </div>
 </div>
 <!--/. banner -->
 
 <div class="container nouveautes">
   <h3 class="pt-2">Les dernières nouveautés</h3>
 
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-  <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-        class="fas fa-chevron-right"></i></a>
-  </div>
-  <!--/.Controls-->
-
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-
-    <!--First slide-->
-    <div class="carousel-item active">
-
-      <div class="cards row justify-content-between pt-2">
-        <div class="col-md-4">
-          <div class="card-image">
-            <div class="card-text justify-content-between">
-              <p>Modèle</p>
-              <p>Marque</p>
+  <div class="d-flex">
+    <div class="cards row justify-content-between pt-2">
+      <% @articles.last(3).each do |article| %>
+        <div class="col">
+          <div class="card-image" style="background-image: url('<%= cl_image_path article.photo %>')">
+            <div class="card-article-content p-2">
+              <div class="card-article-title-price d-flex justify-content-between">
+                <div class="card-article-title">
+                  <h5><%= article.name %></h5>
+                </div>
+                <div class="card-article-price">
+                  <h5><%= article.price %> €</h5>
+                </div>
+              </div>
+              <div class="card-article-brand">
+                <p><%= article.brand.name %></p>
+              </div>
+              <div class="card-article-color">
+                <p><%= article.color %></p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card-image">
-            <div class="card-text justify-content-between">
-              <p>Modèle</p>
-              <p>Marque</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-image">
-            <div class="card-text justify-content-between">
-              <p>Modèle</p>
-              <p>Marque</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <% end %>
     </div>
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <div class="carousel-item">
-
-      <div class="cards row justify-content-between pt-2">
-        <div class="col-md-4">
-          <div class="card-image">
-            <div class="card-text justify-content-between">
-              <p>Modèle</p>
-              <p>Marque</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-image">
-            <div class="card-text justify-content-between">
-              <p>Modèle</p>
-              <p>Marque</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-image">
-            <div class="card-text justify-content-between">
-              <p>Modèle</p>
-              <p>Marque</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!--/.Second slide-->
-
   </div>
-  <!--/.Slides-->
-
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-  </ol>
-  <!--/.Indicators-->
-
-</div>
-<!--/.Carousel Wrapper-->
-
 </div>
