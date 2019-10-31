@@ -18,7 +18,6 @@ gem 'administrate'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'administrate-field-carrierwave', '~> 0.5.0'
-gem 'acts-as-taggable-on', '~> 6.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
