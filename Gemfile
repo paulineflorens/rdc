@@ -16,7 +16,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'administrate'
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'administrate-field-carrierwave', '~> 0.5.0'
 
 group :development do
